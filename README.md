@@ -183,7 +183,7 @@ That's it. No setup. No configuration.
 
 I'm a solo iOS developer who obsesses over animation details. If you want your app to feel this alive, I'm available for freelance work.
 
-**[Twitter/X](https://twitter.com/AjagatO)** &bull; **[GitHub](https://github.com/ajagatobby)**
+**[Twitter/X](https://x.com/ajaga_abdbasit)** &bull; **[GitHub](https://github.com/ajagatobby)** &bull; **[Email](mailto:ajagatobby@gmail.com)**
 
 ---
 
