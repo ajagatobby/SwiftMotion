@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B9EF4"/>
+      <stop offset="50%" stop-color="#6B6FF7"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="swoosh1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#E8E0FF" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="swoosh2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#D4CCFF" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="swoosh3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#C4BAFF" stop-opacity="0.25"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12"/>
+      <feOffset dy="8"/>
+      <feFlood flood-color="#3A2D80" flood-opacity="0.2"/>
+      <feComposite in2="offsetBlur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+
+  <!-- Subtle radial glow in center -->
+  <circle cx="512" cy="480" r="280" fill="white" opacity="0.06"/>
+
+  <!-- Back swoosh (largest, most faded) -->
+  <path d="
+    M 180 650
+    C 180 620, 220 550, 320 530
+    C 420 510, 450 570, 530 555
+    C 610 540, 640 490, 720 480
+    C 800 470, 860 510, 860 530
+    C 860 560, 840 600, 800 620
+    C 750 645, 700 640, 650 635
+    C 590 628, 570 660, 520 670
+    C 460 682, 440 650, 380 658
+    C 310 668, 280 695, 220 685
+    C 170 675, 180 650, 180 650 Z
+  " fill="url(#swoosh3)"/>
+
+  <!-- Middle swoosh -->
+  <path d="
+    M 160 560
+    C 160 530, 200 460, 290 440
+    C 360 425, 390 465, 450 450
+    C 510 435, 530 390, 610 375
+    C 690 360, 740 400, 780 425
+    C 820 450, 815 500, 790 520
+    C 760 545, 720 535, 680 530
+    C 620 522, 600 560, 540 568
+    C 480 576, 460 545, 400 555
+    C 340 565, 310 600, 240 590
+    C 175 578, 160 560, 160 560 Z
+  " fill="url(#swoosh2)"/>
+
+  <!-- Front swoosh (smallest, brightest) -->
+  <g filter="url(#softShadow)">
+    <path d="
+      M 150 460
+      C 155 425, 200 355, 290 335
+      C 350 322, 375 360, 440 345
+      C 505 330, 525 285, 605 275
+      C 685 265, 730 300, 770 330
+      C 810 360, 800 410, 775 430
+      C 740 455, 700 440, 660 435
+      C 600 428, 585 465, 525 472
+      C 465 480, 450 450, 390 458
+      C 320 468, 295 500, 230 490
+      C 165 478, 150 460, 150 460 Z
+    " fill="url(#swoosh1)"/>
+  </g>
+
+  <!-- Fluffy cloud puffs on top edge of front swoosh -->
+  <circle cx="290" cy="330" r="35" fill="white" opacity="0.25" filter="url(#glow)"/>
+  <circle cx="370" cy="340" r="28" fill="white" opacity="0.2" filter="url(#glow)"/>
+  <circle cx="450" cy="325" r="32" fill="white" opacity="0.22" filter="url(#glow)"/>
+  <circle cx="540" cy="290" r="30" fill="white" opacity="0.2" filter="url(#glow)"/>
+  <circle cx="620" cy="278" r="33" fill="white" opacity="0.22" filter="url(#glow)"/>
+  <circle cx="700" cy="295" r="28" fill="white" opacity="0.18" filter="url(#glow)"/>
+  <circle cx="765" cy="325" r="24" fill="white" opacity="0.15" filter="url(#glow)"/>
+
+  <!-- Motion trail dots -->
+  <circle cx="120" cy="475" r="14" fill="white" opacity="0.35"/>
+  <circle cx="95" cy="510" r="9" fill="white" opacity="0.2"/>
+  <circle cx="80" cy="545" r="6" fill="white" opacity="0.12"/>
+  <circle cx="110" cy="575" r="10" fill="white" opacity="0.18"/>
+  <circle cx="90" cy="610" r="6" fill="white" opacity="0.1"/>
+  <circle cx="140" cy="660" r="8" fill="white" opacity="0.12"/>
+
+  <!-- Sparkle accents -->
+  <g fill="white" opacity="0.6">
+    <circle cx="850" cy="350" r="4"/>
+    <circle cx="880" cy="420" r="3"/>
+    <circle cx="820" cy="280" r="3.5"/>
+    <circle cx="200" cy="300" r="3"/>
+    <circle cx="900" cy="550" r="2.5"/>
+  </g>
+
+  <!-- Specular highlight -->
+  <ellipse cx="480" cy="370" rx="180" ry="40" fill="white" opacity="0.08" transform="rotate(-8, 480, 370)"/>
+</svg>
