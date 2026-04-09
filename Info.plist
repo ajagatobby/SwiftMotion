@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BricolageGrotesque_72pt-ExtraBold.ttf</string>
+		<string>BricolageGrotesque_72pt-Bold.ttf</string>
+		<string>BricolageGrotesque_72pt-Medium.ttf</string>
+		<string>BricolageGrotesque_72pt-Regular.ttf</string>
+		<string>BricolageGrotesque_72pt-Light.ttf</string>
+		<string>BricolageGrotesque_24pt-ExtraBold.ttf</string>
+		<string>BricolageGrotesque_24pt-Bold.ttf</string>
+		<string>BricolageGrotesque_24pt-SemiBold.ttf</string>
+		<string>BricolageGrotesque_24pt-Medium.ttf</string>
+		<string>BricolageGrotesque_24pt-Regular.ttf</string>
+		<string>BricolageGrotesque_24pt-Light.ttf</string>
+		<string>BricolageGrotesque_24pt-ExtraLight.ttf</string>
+	</array>
+</dict>
+</plist>

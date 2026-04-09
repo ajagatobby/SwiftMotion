@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Main gradient: vibrant blue to purple -->
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A90D9"/>
+      <stop offset="100%" stop-color="#7B61FF"/>
+    </linearGradient>
+    <!-- Lighter overlay gradient for depth -->
+    <linearGradient id="lightGrad" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#6BA8E8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#9B85FF" stop-opacity="0.7"/>
+    </linearGradient>
+    <!-- Highlight gradient for top fluffy accent -->
+    <linearGradient id="highlightGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#8BB8F0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#A78BFF" stop-opacity="0.3"/>
+    </linearGradient>
+    <!-- Subtle shadow filter for depth -->
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+      <feOffset dx="2" dy="4" result="offsetBlur"/>
+      <feFlood flood-color="#3A2D80" flood-opacity="0.2" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Soft glow for friendliness -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!--
+    SwiftMotion Logo
+    A fluffy, cloud-like triple-swoosh that implies motion/animation.
+    Three stacked soft wave trails, largest at back, smallest at front,
+    creating a sense of bouncy forward movement.
+  -->
+
+  <g filter="url(#softShadow)">
+
+    <!-- LAYER 1: Back swoosh (largest, most spread) — implies trailing motion -->
+    <path d="
+      M 80 340
+      C 80 340, 100 280, 160 270
+      C 220 260, 240 300, 280 290
+      C 320 280, 340 240, 390 235
+      C 440 230, 460 260, 460 260
+      C 470 270, 465 295, 450 310
+      C 430 330, 390 335, 360 330
+      C 320 322, 310 350, 270 355
+      C 230 360, 220 330, 180 335
+      C 140 342, 120 365, 95 360
+      C 70 355, 80 340, 80 340
+      Z
+    " fill="url(#mainGrad)" opacity="0.45"/>
+
+    <!-- LAYER 2: Middle swoosh — the main body of motion -->
+    <path d="
+      M 70 280
+      C 70 265, 95 215, 145 200
+      C 175 192, 195 218, 230 210
+      C 265 202, 275 172, 325 162
+      C 375 152, 410 178, 430 195
+      C 450 212, 448 245, 430 260
+      C 412 275, 385 270, 355 268
+      C 315 264, 305 290, 265 295
+      C 225 300, 215 272, 175 278
+      C 135 285, 120 310, 92 305
+      C 65 298, 70 280, 70 280
+      Z
+    " fill="url(#mainGrad)" opacity="0.7"/>
+
+    <!-- LAYER 3: Front swoosh (smallest, sharpest) — the leading edge -->
+    <path d="
+      M 65 215
+      C 68 195, 100 148, 155 135
+      C 190 127, 205 155, 245 145
+      C 285 135, 295 105, 345 98
+      C 395 91, 425 115, 440 138
+      C 455 161, 445 192, 425 205
+      C 400 222, 370 212, 340 210
+      C 300 206, 295 232, 255 236
+      C 215 240, 210 215, 170 220
+      C 130 226, 115 248, 88 242
+      C 60 235, 65 215, 65 215
+      Z
+    " fill="url(#mainGrad)"/>
+
+    <!-- Fluffy highlight bubbles on the front swoosh for soft/cloud feel -->
+    <!-- Top edge puffs -->
+    <circle cx="155" cy="132" r="18" fill="url(#highlightGrad)" filter="url(#softGlow)"/>
+    <circle cx="200" cy="140" r="14" fill="url(#highlightGrad)" filter="url(#softGlow)"/>
+    <circle cx="250" cy="130" r="16" fill="url(#highlightGrad)" filter="url(#softGlow)"/>
+    <circle cx="305" cy="105" r="15" fill="url(#highlightGrad)" filter="url(#softGlow)"/>
+    <circle cx="350" cy="98" r="17" fill="url(#highlightGrad)" filter="url(#softGlow)"/>
+    <circle cx="400" cy="108" r="14" fill="url(#highlightGrad)" filter="url(#softGlow)"/>
+    <circle cx="435" cy="135" r="12" fill="url(#highlightGrad)" filter="url(#softGlow)"/>
+
+    <!-- Motion trail particles — small dots trailing behind for animation feel -->
+    <circle cx="52" cy="230" r="8" fill="url(#mainGrad)" opacity="0.5"/>
+    <circle cx="38" cy="250" r="5" fill="url(#mainGrad)" opacity="0.35"/>
+    <circle cx="30" cy="275" r="3.5" fill="url(#mainGrad)" opacity="0.2"/>
+
+    <circle cx="48" cy="295" r="6" fill="url(#mainGrad)" opacity="0.35"/>
+    <circle cx="35" cy="315" r="4" fill="url(#mainGrad)" opacity="0.2"/>
+
+    <circle cx="58" cy="350" r="5" fill="url(#mainGrad)" opacity="0.25"/>
+    <circle cx="45" cy="365" r="3" fill="url(#mainGrad)" opacity="0.15"/>
+
+    <!-- Sheen / specular highlight on front swoosh for 3D softness -->
+    <ellipse cx="280" cy="155" rx="100" ry="25" fill="white" opacity="0.12" transform="rotate(-8, 280, 155)"/>
+    <ellipse cx="200" cy="165" rx="50" ry="12" fill="white" opacity="0.08" transform="rotate(-5, 200, 165)"/>
+
+  </g>
+</svg>
